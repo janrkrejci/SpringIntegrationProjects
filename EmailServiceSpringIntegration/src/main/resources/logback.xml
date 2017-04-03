@@ -1,0 +1,19 @@
+<configuration>
+   <logger name="org.apache" level="WARN" />
+   <logger name="org.springframework" level="WARN" />
+   <logger name="br.com" level="DEBUG" />
+   <logger name="com.sun.mail" level="DEBUG" />
+   <logger name="javax.mail" level="DEBUG" />
+
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+       <Target>System.out</Target>
+       <encoder>
+          <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+       </encoder>
+    </appender>
+
+    <root level="INFO">
+       <appender-ref ref="stdout" />
+    </root>
+
+</configuration>
